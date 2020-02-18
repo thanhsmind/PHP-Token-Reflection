@@ -313,7 +313,10 @@ abstract class ReflectionElement extends ReflectionBase
 	private final function parseEndLine(Stream $tokenStream)
 	{
 		$token = $tokenStream->current();
-		$this->endLine = $token[2];
+		// @TODO: thanhnp fix 
+		if(isset($token[2])){
+			$this->endLine = $token[2];	
+		}
 
 		$this->endPosition = $tokenStream->key();
 
