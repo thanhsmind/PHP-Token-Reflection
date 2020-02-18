@@ -267,7 +267,7 @@ class ReflectionMethod extends InternalReflectionMethod implements IReflection, 
 	 * @param object $object Object
 	 * @return \Closure
 	 */
-	public function getClosure($object)
+	public function getClosure($object=null)
 	{
 		if (PHP_VERSION_ID >= 50400) {
 			return parent::getClosure();
